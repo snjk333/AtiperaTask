@@ -13,7 +13,7 @@ public class GitHubClientConfiguration {
         return RestClient.builder()
                 .baseUrl("https://api.github.com")
                 .defaultHeader(HttpHeaders.ACCEPT, "application/vnd.github+json")
-                .defaultHeader(HttpHeaders.USER_AGENT, "Spring-Boot-App")
+                .defaultHeader(HttpHeaders.USER_AGENT, "Atipera-APP_Kulbit")
                 .build();
     }
 
