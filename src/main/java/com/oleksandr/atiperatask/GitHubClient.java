@@ -13,7 +13,7 @@ public class GitHubClient {
 
     private final RestClient githubRestClient;
 
-    public List<GithubResponse> getUserRepos(String username) {
+    public List<GithubRepoResponse> getUserRepos(String username) {
         return githubRestClient.get()
                 .uri(uriBuilder -> uriBuilder
                         .path("/users/{username}/repos")
