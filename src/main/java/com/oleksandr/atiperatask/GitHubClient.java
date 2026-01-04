@@ -21,6 +21,15 @@ public class GitHubClient {
                 .retrieve()
                 .body(new ParameterizedTypeReference<>() {});
     }
+
+    public List<Branch> getUserRepos(String username, String repositoryName) {
+        return githubRestClient.get()
+                .uri(uriBuilder -> uriBuilder
+                        .path("/repos/{username}/{repositoryName}/branches")
+                        .build(username, repositoryName))
+                .retrieve()
+                .body(new ParameterizedTypeReference<>() {});
+    }
 }
 
 
