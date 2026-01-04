@@ -22,7 +22,7 @@ public class GitHubClient {
                 .body(new ParameterizedTypeReference<>() {});
     }
 
-    public List<Branch> getUserRepos(String username, String repositoryName) {
+    public List<Branch> getBranchInfoByRepo(String username, String repositoryName) {
         return githubRestClient.get()
                 .uri(uriBuilder -> uriBuilder
                         .path("/repos/{username}/{repositoryName}/branches")
