@@ -25,11 +25,11 @@ repositories {
 }
 
 dependencies {
-    implementation("org.springframework.boot:spring-boot-starter-webmvc")
+    implementation("org.springframework.boot:spring-boot-starter-web")
     compileOnly("org.projectlombok:lombok")
     annotationProcessor("org.projectlombok:lombok")
-    testImplementation("org.springframework.boot:spring-boot-starter-webmvc-test")
-    testImplementation("com.github.tomakehurst:wiremock:1.18")
+    testImplementation("org.springframework.boot:spring-boot-starter-test")
+    testImplementation("org.wiremock.integrations:wiremock-spring-boot:4.0.8")
     testRuntimeOnly("org.junit.platform:junit-platform-launcher")
 }
 
